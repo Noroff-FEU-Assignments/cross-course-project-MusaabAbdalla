@@ -61,11 +61,15 @@ header li, header a {
 
 .nav-links li{
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 0 0 16px;
 }
-.nav-icons i{
+.nav-icons  i{
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 6px;
+    font-size: 20px;
+}
+.active-icon{
+    color: var(--primary-color);
 }
 .nav-links li a, header a i {
     transition: all 0.4s ease 0s;
@@ -83,6 +87,10 @@ header li, header a {
     margin: 0 auto 16px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.active {
+    border-bottom: 3px var(--primary-color) solid ;
 }
 
 
@@ -394,6 +402,10 @@ textarea:focus ~span {
     -webkit-transition-property: box-shadow, transform;
     transition-property: box-shadow, transform;
 }
+.checkout-title {
+    position: relative;
+    left: 10%;
+}
 .cart-container{
     display:flex;
     flex-direction: column;
@@ -541,6 +553,10 @@ textarea:focus ~span {
 }
 
 @media (min-width:600px) {
+    /* Navbar */
+    .nav-icons i {
+        font-size: 24px;
+    }
     /* Contact Us page */
 
     .container{
@@ -584,6 +600,10 @@ textarea:focus ~span {
 }
 
 @media (min-width:1200px) {
+    /* Navbar */
+    .nav-icons i {
+        font-size: 32px;
+    }
 
     /* Product Page */
 
@@ -629,6 +649,11 @@ textarea:focus ~span {
         margin: 96px auto 160px;
     }
     /* Checkout page */
+    /* .checkout-title { */
+    /*     position: relative; */
+    /*     left: 14%; */
+    /* } */
+
     .cart-container{
         /* border: 1px black solid; */
         flex-direction: row;
@@ -660,4 +685,13 @@ textarea:focus ~span {
     .box i {
         font-size: 64px;
     }
+}
+
+@media (min-width:1920px) {
+    main, header{
+        max-width:90%;
+        margin: 0 auto;
+
+    }
+
 }
