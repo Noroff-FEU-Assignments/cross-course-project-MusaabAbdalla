@@ -103,7 +103,7 @@ header li, header a {
     gap:16px;
 }
 .title h1 {
-    color : var(--primary-color);
+    color : var(--secondary-color);
 }
 .line-short{
     max-height:0px;
