@@ -1,0 +1,23 @@
+
+export function renderProductDetails(product) {
+
+  const productContainer = document.querySelector(".product-card")
+  productContainer.innerHTML = `
+
+            <div class="product-card-small-image">
+                <img src=${product.image} alt=${product.title} />
+            </div>
+            <h3>${product.title}</h3>
+            <p>${product.description}</p>
+            <div class="size-list">
+                <p class="size">${product.sizes[1]}</p>
+                <p class="size">${product.sizes[2]}</p>
+                <p class="size">${product.sizes[3]}</p>
+                <p class="size">${product.sizes[4]}</p>
+            </div>
+            <div>
+                <a href="cart.html" class="button">Add to cart</a>
+            </div>
+            <h4>$${product.price}</h4>
+`
+}
