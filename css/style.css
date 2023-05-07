@@ -248,13 +248,13 @@ footer .logo{
 }
 .product-card-small-image img{
     max-width:100%;
-    max-height: 80%;
+    /* max-height: 80%; */
     border-radius: 8px;
     /* border: 1px solid lightgray; */
 }
-.product-card-small-image {
-    max-height:600px;
-}
+/* .product-card-small-image { */
+/*     max-height:600px; */
+/* } */
 .size-list{
     display:flex;
     justify-content:flex-start;
