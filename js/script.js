@@ -1,5 +1,5 @@
 
-
+import { errorMessage } from "./components/errorMessage.js"
 const url = "https://api.noroff.dev/api/v1/rainy-days"
 
 const productsContainer = document.querySelector(".product-list")
@@ -16,7 +16,7 @@ async function getproducts() {
 
   }
   catch (error) {
-    console.log("There was an error with:", error)
+    errorMessage(error, ".product-list")
 
   }
 }

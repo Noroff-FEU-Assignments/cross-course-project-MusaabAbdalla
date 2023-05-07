@@ -1,5 +1,5 @@
 
-
+import { errorMessage } from "./components/errorMessage.js"
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id")
@@ -13,7 +13,7 @@ async function getProduct() {
         renderProductDetails(product);
     }
     catch (error) {
-        console.log("There was an error with: ", error)
+        errorMessage(error, ".product-card")
     };
 }
 getProduct()
