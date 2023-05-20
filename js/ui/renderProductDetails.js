@@ -16,8 +16,9 @@ export function renderProductDetails(product) {
                 <p class="size">${product.sizes[3]}</p>
                 <p class="size">${product.sizes[4]}</p>
             </div>
-            <div>
+            <div class="buttons-container">
                 <a href="cart.html" class="button">Add to cart</a>
+                <a href="#"  class="button fav-button" id="fav-button"><i class="fa fa-heart"></i></a>
             </div>
             <h4>$${product.price}</h4>
 `

@@ -276,6 +276,12 @@ footer .logo{
 }
 
 /* product page for each item */
+.buttons-container{
+    display:flex;
+    justify-content: flex-start;
+    gap: 4px;
+
+}
 
 .button{
     text-decoration: none;
@@ -293,6 +299,18 @@ footer .logo{
 
 
 }
+.fav-button{
+    border-radius: 33px;
+    font-size: 30px;
+    padding: 16px 16px;
+    display :flex;
+    justify-content: center;
+    align-items: center;
+}
+ .fa-active{
+    color:red;
+}
+
 
 .button:hover, .button:focus, .button:active, .black-button:hover, .black-button:focus, .black-button:active{
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
