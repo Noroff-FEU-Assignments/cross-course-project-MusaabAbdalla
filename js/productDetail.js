@@ -5,6 +5,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id")
 const url = "https://api.noroff.dev/api/v1/rainy-days/" + id;
 import { renderProductDetails } from "./ui/renderProductDetails.js"
+const favourite = JSON.parse(localStorage.getItem("favourite"))
 async function getProduct() {
     try {
         const response = await fetch(url);
@@ -13,8 +14,16 @@ async function getProduct() {
         renderProductDetails(product);
 
         const favButton = document.querySelector(".fav-button");
+        const favIcon = document.querySelector(".fav-button i")
+        const productExist = favourite.find(function (item) {
+            return item.id === product.id;
+        })
+        if (productExist) {
+            favIcon.classList.add("fa-active")
+
+        }
+
         favButton.onclick = function () {
-            const favIcon = document.querySelector(".fav-button i")
             favIcon.classList.toggle("fa-active")
             const existingFav = getExistingFav();
 
