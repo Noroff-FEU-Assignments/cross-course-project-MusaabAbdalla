@@ -1,4 +1,4 @@
-const favourite = JSON.parse(localStorage.getItem("favourite"));
+const favourite = JSON.parse(localStorage.getItem("favourite")) || [];
 const favListContainer = document.querySelector(".favourite-list-container")
 
 function showFavourite() {
