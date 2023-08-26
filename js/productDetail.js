@@ -1,14 +1,21 @@
 
 import { errorMessage } from "./components/errorMessage.js"
+import { renderProductDetails } from "./ui/renderProductDetails.js"
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id")
-const url = "https://api.noroff.dev/api/v1/rainy-days/" + id;
-import { renderProductDetails } from "./ui/renderProductDetails.js"
+
+
+const url = "https://jambooblog.online/wp-json/wc/v3/products/"
+const consumer_key = "ck_4ac4239b5976edd2dd3993b1cf02ee5ae802f2d7"
+const consumer_secret = "cs_76c26a90b48785549888b5489aaf9f033ca768df"
+const baseUrl = url + `${id}` + `?consumer_key=${consumer_key}&consumer_secret=${consumer_secret}`
+
+
 const favourite = JSON.parse(localStorage.getItem("favourite")) || [];
 async function getProduct() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(baseUrl);
         const data = await response.json();
         const product = data;
         renderProductDetails(product);
@@ -46,6 +53,7 @@ async function getProduct() {
 
     }
     catch (error) {
+        console.log(error)
         errorMessage(error, ".product-card")
     };
 }

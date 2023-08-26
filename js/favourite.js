@@ -8,9 +8,9 @@ function showFavourite() {
 
             <div class="favourite-item">
                 <div class="favourite-item-image">
-                    <img src=${product.image} alt="" />
+                    <img src=${product.images[0].src} alt="" />
                 </div>
-                <div>${product.title}</div>
+                <div>${product.name}</div>
                 <div>${product.price}</div>
                 <i class="fa-duotone fa-trash" data-id="${product.id}"></i>
              </div>
